@@ -13,10 +13,10 @@ pipeline {
         stage('Build Image') {
             steps {
                 
-		sh 'docker build -t 
+		sh 'docker build -t https://github.com/psegarrac/EjemploDockerHub'
             }
         }
-        stage('Docker Login') {
+        stage('DockerHUB Login') {
             steps {
                 
                 sh 'echo $DOCKERHUB_CREDS_PSW | docker login -u $DOCKERHUB_CREDS_USR --password-stdin'                
@@ -25,7 +25,7 @@ pipeline {
         stage('Docker Push') {
             steps {
 		
-                sh 'docker push 
+                sh 'docker push https://github.com/psegarrac/EjemploDockerHub'
                 }
             }
         }
