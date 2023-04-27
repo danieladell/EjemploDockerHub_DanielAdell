@@ -32,6 +32,7 @@ pipeline {
         }
     post {
 		always {
+			discordSend description: '', footer: '', image: '', link: '', result: '', scmWebUrl: '', thumbnail: '', title: 'Repositorio actualizado!', webhookURL: 'https://discord.com/api/webhooks/1101207786722971798/sGd0zmkF1BerjI9_xrDoIVu3pgWgGUTebbYeS8GW4l4JB2Wb6VMHlNiPkWCXAPAL82dB'
 			sh 'sudo docker logout'
 		}
 	 }
