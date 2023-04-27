@@ -13,7 +13,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 //Aquí debes poner tu github
-		sh 'docker build -t https://github.com/danieladell/EjemploDockerHub_DanielAdell.git .'
+		sh 'docker build -t ejemplodockerhub_danieladell .'
             }
         }
         stage('DockerHUB Login') {
@@ -25,7 +25,7 @@ pipeline {
         stage('Docker Push') {
             steps {
 		//Aquí debes poner tu github
-                sh 'docker push https://github.com/danieladell/EjemploDockerHub_DanielAdell.git'
+                sh 'docker push ejemplodockerhub_danieladell'
                 }
             }
         }
