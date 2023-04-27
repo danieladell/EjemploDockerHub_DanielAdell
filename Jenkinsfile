@@ -25,7 +25,7 @@ pipeline {
         stage('Docker Push') {
             steps {
 		//Aquí debes poner tu github
-                sh 'sudo docker push ejemplodockerhub_danieladell'
+                sh 'sudo docker push $DOCKERHUB_CREDS_USR/ejemplodockerhub_danieladell'
                 }
             }
         }
